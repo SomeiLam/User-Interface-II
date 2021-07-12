@@ -19,7 +19,6 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-	/* border: 0; */
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
@@ -28,9 +27,6 @@ time, mark, audio, video {
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
-}
-body {
-	line-height: 1;
 }
 ol, ul {
 	list-style: none;
@@ -54,7 +50,12 @@ table {
 }
 
 html {
-    height: 100%;
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.8rem;
+    background-color:#FBFFFB;
 }
 
 header {
@@ -66,19 +67,18 @@ header {
     flex-direction: column;
     height: 10vh;
     margin: 0 30px;
-    padding: 30px 0;
+    padding: 3% 0 1% 0;
 }
 
 .header h1 {
-    font-size: 3.5em;
-    margin: 10px;
+    font-size: 5rem;
+    margin: 0 1%;
     font-family: 'Otomanopee One', sans-serif;
 }
 
 .header nav {
     display: flex;
-    margin: 20px;
-
+    margin-left: 2%;
 }
 
 nav a {
@@ -97,11 +97,11 @@ nav a:hover {
 
 .main-container {
     display: flex;
-    margin: 20px;
+    margin: 2%;
 }
 
 .main-container img {
-    margin: 10px;
+    margin: 1%;
     border-radius: 50%;
     width: 70%;
     opacity: .8;
@@ -110,27 +110,27 @@ nav a:hover {
 .main-container div {
     display: flex;
     flex-direction: column;
-    margin: 50px;
+    margin: 5%;
 }
 
 .main-container div h2 {
     font-family: 'Otomanopee One', sans-serif;
-    font-size: 2.5em;
-    margin: 10px 10px;
+    font-size: 3rem;
+    margin: 1%;
     color: #141249;
 }
 
 .main-container div button {
     font-family: 'PT Sans', sans-serif;
-    margin: 10px 10px;
+    margin: 1%;
     width: 100px;
     cursor: pointer;
     padding: 5px;
 }
 
 .main-container div p {
-    margin: 10px 150px 0 12px;
-    font-size: 1.5em;
+    margin: 1% 15% 0 1.2%;
+    font-size: 2.5rem;
     font-family: 'Caveat', cursive;
     color: #141249;
 }
@@ -138,12 +138,18 @@ nav a:hover {
 .row {
     display: flex;
     justify-content: space-evenly;
-    margin: 10px 10px;
+    margin: 1%;
 }
 
-.row p {
+.row div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row div p {
     text-align: center;
-    font-size: 1.5em;
+    font-size: 2.5rem;
     font-family: 'Caveat', cursive;
     color: #141249;
     margin: 5px 0;
@@ -160,15 +166,68 @@ footer {
 
 footer p {
     font-family: 'Otomanopee One', sans-serif;
-    font-size: 2em;
+    font-size: 3rem;
     color: #141249;
 }
 
 footer button {
     font-family: 'PT Sans', sans-serif;
-    margin: -25px 0 0 0;
+    margin: -2.5% 0 0 0;
     width: 150px;
     cursor: pointer;
     padding: 5px;
-    font-size: 1.2em;
+    font-size: 2rem;
+}
+
+/* Media Queries */
+
+@media(max-width: 800px) {
+
+    header {
+        background-color: #FBFFFB;
+    }
+
+    .header {
+        align-items: center;
+        height: 100%;
+    }
+
+    .header nav {
+        flex-direction: column;
+        text-align: center;
+        margin: 1% 0;
+    }
+
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .main-container div {
+        margin: 0;
+        align-items: center;
+    }
+
+    .main-container div p {
+        margin: 1% 15%;
+        text-align: center;
+    }
+
+    .row {
+        flex-wrap: wrap;
+    }
+
+    .row div {
+        width: 45%;
+        margin: 2% 0 5% 0;
+    }
+}
+
+@media(max-width: 500px) {
+
+    .row div {
+        width: 90%;
+    }
+
 }
